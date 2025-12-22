@@ -61,6 +61,14 @@
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
         };
+
+        MO_TOG_2: MO_TOG_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&mo 2>, <&macro_tap>, <&tog 2>;
+
+            label = "MO_TOG_2";
+        };
     };
 
     keymap {
@@ -88,7 +96,7 @@
             &kp Q             &kp W           &kp E           &kp R        &kp T        &kp Y          &kp U               &kp I               &kp O                &kp P
             &kp A             &kp S           &kp D           &kp F        &kp G        &kp H          &kp J               &kp K               &kp L                &kp SEMI
 &kp ESCAPE  &mt LEFT_SHIFT Z  &mt LEFT_GUI X  &mt LEFT_ALT C  &mt LCTRL V  &kp B        &kp N          &mt LEFT_CONTROL M  &mt LEFT_ALT COMMA  &mt LEFT_GUI PERIOD  &mt LEFT_SHIFT SLASH  &kp SQT
-                                              &tog 2          &lt 1 TAB    &kp SPACE    &kp BACKSPACE  &lt 1 ENTER         &tog 2
+                                              &MO_TOG_2       &lt 1 TAB    &kp SPACE    &kp BACKSPACE  &lt 1 ENTER         &MO_TOG_2
             >;
         };
 
