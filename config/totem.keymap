@@ -63,6 +63,17 @@
         };
     };
 
+    behaviors {
+        mo_tog: mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_TOG";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -88,7 +99,7 @@
             &kp Q             &kp W           &kp E           &kp R        &kp T        &kp Y          &kp U               &kp I               &kp O                &kp P
             &kp A             &kp S           &kp D           &kp F        &kp G        &kp H          &kp J               &kp K               &kp L                &kp SEMI
 &kp ESCAPE  &mt LEFT_SHIFT Z  &mt LEFT_GUI X  &mt LEFT_ALT C  &mt LCTRL V  &kp B        &kp N          &mt LEFT_CONTROL M  &mt LEFT_ALT COMMA  &mt LEFT_GUI PERIOD  &mt LEFT_SHIFT SLASH  &kp SQT
-                                              &mo 2           &lt 1 TAB    &kp SPACE    &kp BACKSPACE  &lt 1 ENTER         &mo 2
+                                              &mo_tog 2 2     &lt 1 TAB    &kp SPACE    &kp BACKSPACE  &lt 1 ENTER         &mo_tog 2 2
             >;
         };
 
